@@ -1,0 +1,630 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_mixins/custom"
+
+/*======== Typography ========*/
+*
+	margin: 0
+	padding: 0
+	outline: none
+	box-sizing: border-box
+
+
+html, body
+	font-family: $H, 'sans-serif'
+	font-size: 10px
+	font-weight: normal
+	font-style: normal
+	color: $black
+	position: relative
+	scroll-behavior: smooth
+
+
+ul, li
+	display: block
+	list-style: none
+	margin: 0
+	padding: 0
+
+
+h1, h2, h3, h4, h5, h6, p, address, span, label
+	letter-spacing: normal
+	margin: 0
+	padding: 0
+
+
+h1
+	font-family: $RB
+	font-weight: bold
+	font-style: normal
+
+
+h2, h3, h4, h5, h6
+	font-family: $RB
+	font-weight: 600
+	font-style: normal
+
+
+a
+	text-decoration: none
+	font-family: $R, 'sans-serif'
+	
+	&:hover
+		text-decoration: none
+
+
+/*======== /.Typography ========*/
+
+
+
+/*======== Common classes ========*/
+.no__paddings
+	padding: 0
+
+
+.section__title
+	color: $black
+	font-size: 3.5rem
+	letter-spacing: 0.3rem
+	word-spacing: 0.1rem
+	text-transform: uppercase
+	text-align: center
+	padding: 1em 0
+
+
+.section__title_white
+	color: $white
+
+
+.section__padding
+	padding-bottom: 3em
+
+
+.bg__properties
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+
+.overlay
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 2
+	background-color: rgba(0, 0, 0, 0.5)
+
+
+.z__index_3
+	position: relative
+	z-index: 3
+
+
+.swiper-container
+	width: 100%
+	height: 100%
+	margin-left: auto
+	margin-right: auto
+
+
+.swiper-slide
+	text-align: center
+	display: -webkit-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	-webkit-justify-content: center
+	justify-content: center
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-webkit-align-items: center
+	align-items: center
+	
+section.minHeight
+	min-height: 100vh
+
+/*======== Common classes ========*/
+
+
+//.nav__position
+//	width: 100%
+//	position: fixed
+//	top: 0
+//	left: 0
+//	z-index: 15
+//	background-color: #fd0
+
+
+
+
+
+
+
+/*======== Header ========*/
+.header
+	width: 100%
+	height: 100vh
+	
+	
+	.menu
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		width: 100%
+		padding-top: 1em
+	
+		&__close
+			display: none
+		
+			span
+				display: inline-block
+		
+			span::before
+				margin: 0
+	
+				
+		.logo
+			&__link
+				color: $white
+				text-decoration: none
+				
+				.name
+					font-size: 2.7rem
+					font-family: $R, 'sans-serif'
+					text-transform: uppercase
+					letter-spacing: 0.4rem
+				
+				.surname
+					font-size: 1.8rem
+					letter-spacing: 0.05rem
+					text-transform: uppercase
+					font-weight: 200
+	
+		&__wrapper
+			width: 100%
+	
+			
+		&__list
+			display: inline-flex
+			flex-direction: row
+			justify-content: flex-end
+			align-items: center
+			width: 100%
+			height: 100%
+	
+			
+		&__link
+			color: $white
+			font-size: 1.7rem
+			text-transform: capitalize
+			padding: 0 1.5em
+	
+			
+		&__item_custom
+			height: 2.5rem
+			margin-left: 5em
+	
+			
+		&__langList
+			display: inline-flex
+			flex-direction: column
+			align-items: center
+			// justify-content: space-between
+			max-height: 2.5rem
+			min-height: 2.5rem
+			overflow: hidden
+			transition: all 0.5s ease
+			
+			&:hover
+				min-height: 5rem
+				max-height: 5rem
+				overflow: visible
+	
+				
+		&__langLink
+			color: $white
+			text-transform: uppercase
+			font-size: 1.7rem
+			transition: all 0.5s ease
+	
+		&__icon
+			display: none
+		
+			span
+				color: $white
+				cursor: pointer
+				
+				&::before
+					margin: 0
+	
+	
+	&__content
+		width: 100%
+		//padding: 0 12em
+		transform: translateY(38%)
+	
+	&__title
+		font-size: 5rem
+		letter-spacing: 0.5rem
+		word-spacing: 0.1rem
+		text-transform: capitalize
+		color: #FFDD00
+		font-family: $R, 'sans-serif'
+	
+	&__desc
+		width: 35%
+		color: $white
+		font-size: 1.8rem
+		font-family: $H, 'sans-serif'
+		letter-spacing: 0.1rem
+		margin: 1.8em 0 2.5em
+	
+	&__btn
+		display: inline-block
+		color: $black
+		font-size: 1.8rem
+		letter-spacing: 0.1rem
+		text-transform: capitalize
+		background-color: #FFDD00
+		padding: 1em 3em
+		border-radius: 1rem
+/*======== Header ========*/
+
+
+
+
+/*======== Books ========*/
+.books
+	width: 100%
+	min-height: 100%
+	max-height: 100%
+
+	.lg_none
+		display: none
+
+
+	&__list
+		width: 100%
+
+	&__row
+		display: flex
+		flex-direction: row
+		align-items: center
+
+	&__row:nth-child(1)
+		justify-content: flex-end
+
+		.book:nth-child(1)
+			margin-right: 29.5em
+
+
+		.book:nth-child(2)
+			margin-right: 6.5em
+	
+	
+	&__row:nth-child(2)
+		justify-content: center
+
+		.book:nth-child(2)
+			margin: 0 4em
+
+
+	&__row:nth-child(3)
+		padding: 0 7em
+		justify-content: space-between
+
+	.book
+		width: 20rem
+		height: 20rem
+		clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+		position: relative
+		z-index: 1
+
+		&__overlay
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			z-index: 3
+			transition: all 0.5s ease
+			display: flex
+			justify-content: center
+			align-items: center
+
+			&:hover
+				background-color:  #FFDD00
+				visibility: visible
+
+				h3
+					opacity: 1
+
+			h3
+				color: $white
+				font-size: 1.8rem
+				text-transform: capitalize
+				// visibility: hidden
+				transition: all 0.5s ease
+				opacity: 0
+				
+		img
+			display: block
+			max-width: 100%
+			height: auto
+		
+/*======== Books ========*/
+
+
+
+
+/*======== Memories ========*/
+.memories
+	width: 100%
+	min-height: 100%
+	max-height: 100%
+	position: relative
+	z-index: 1
+	
+
+	.swiper-button-prev,
+	.swiper-button-next
+		top: 75%
+
+	
+	&__author__wrapper
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+	
+	
+	&__author
+		width: 20rem
+		height: 20rem
+		border-radius: 50%
+	
+	
+	&__slide
+		background-color: transparent
+		display: flex
+		flex-direction: column
+		justify-content: center
+	
+	
+	&__btn
+		color: #FFDD00
+		background-image: none
+		font-weight: bold
+		font-size: 3rem
+		padding: 1em
+		display: flex
+		justify-content: center
+		align-items: center
+	
+	
+	&__sign
+		color: #FFDD00
+		font-size: 3rem
+		margin: 6rem 0
+	
+	&__sign::before
+		margin: 0
+		padding: 0
+		font-size: 4rem
+	
+	
+	&__text
+		width: 60%
+		color: $white
+		letter-spacing: 0.1rem
+		font-size: 1.8rem
+	
+	
+	&__author__name
+		text-transform: capitalize
+		color: $white
+		margin-top: 1em
+		letter-spacing: 0.1rem
+		font-size: 2.5rem
+/*======== Memories ========*/
+
+
+
+/*======== Gallery ========*/
+.gallery
+	padding-bottom: 0
+	min-height: 100%
+	max-height: 100%
+	
+	&__menu
+		width: 100%
+		display: flex
+		justify-content: center
+		margin-bottom: 5em
+	
+	
+	&__list
+		display: inline-flex
+		flex-direction: row
+		margin: 0 auto
+	
+	
+	&__item
+		font-size: 1.3rem
+		text-transform: uppercase
+		font-family: $HB, 'sans-serif'
+		padding: 1em 1.5em
+		position: relative
+		cursor: pointer
+		margin: 0 0.5em
+		
+		.magic_line
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			margin: 0 auto
+			min-width: 0
+			max-width: 0
+			height: 0.2rem
+			background-color: #FFDD00
+			transition: all 0.5s ease
+		
+		.magic_line_active
+			min-width: 100%
+			max-width: 100%
+	
+	
+	&__item:first-child,
+	&__item:last-child
+		margin: 0
+	
+	
+	&__item_active
+		color: #FFDD00
+	
+	
+	&__img
+		width: 100%
+		height: 25rem
+/*======== Gallery ========*/
+
+
+
+/*======== Contact ========*/
+.contact
+	width: 100%
+	min-height: 100%
+	max-height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	//padding-top: 5em
+	
+	
+	&__content
+		width: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	
+	
+	&__img
+		
+		img
+			display: block
+			max-width: 100%
+			height: auto
+	
+	
+	&__text
+		width: 45%
+		text-align: center
+		color: $white
+		font-size: 2.1rem
+		letter-spacing: 0.1rem
+		margin: 2em 0
+	
+	
+	&__email
+		font-size: 3.6rem
+		letter-spacing: 0.5rem
+		color: #FFDD00
+	
+	
+	&__footer
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		background-color: #1E1E1E
+		padding: 1em 0
+	
+	
+	.logo
+		display: inline-block
+		margin: 0.5em 0
+		
+		&__link
+			color: #FFDD00
+			text-transform: uppercase
+			
+			.name
+				font-size: 2rem
+				letter-spacing: 0.2rem
+			
+			.surname
+				font-size: 1.3rem
+				letter-spacing: 0.1rem
+	
+	
+	.copyright
+		color: $white
+		font-size: 1.5rem
+		letter-spacing: 0.2rem
+		margin: 0.5em 0
+
+/*======== Contact ========*/
+
+
+
+
+
+.custom__modal
+
+	&__xl
+		height: 100%
+
+	&__content
+		width: 100%
+		min-height: 100%
+
+	&__img
+		width: 100%
+		height: auto
+		
+		img
+			display: block
+			max-width: 100%
+			height: auto
+
+	&__text
+
+		h2
+			font-size: 3rem
+			padding: 0.5em 0
+
+		p
+			font-size: 1.5rem
+
+	&__close
+		padding-top: 0
+		padding-bottom: 0
+
+		span
+			font-size: 3rem
+			cursor: pointer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Always at the end
+@import "media" 
