@@ -11,27 +11,37 @@
    /*======== Common classes ========*/
    .section__title
       font-size: 3rem
+      
    /*======== Common classes ========*/
 
 
 
    /*======== Common classes ========*/
+   
+   .menu
+      .logo__link
+         .name
+            font-size: 3.2rem
+         
+         .surname
+            font-size: 2.3rem
+   
+   
    .header
-      .menu
-
-         .logo__link
-
-            .name
-               font-size: 3.2rem
-
-            .surname
-               font-size: 2.3rem
-
-
-
+      
+      //Header-content
+      &__content
+         width: 100%
+         -webkit-transform: translateY(60%)
+         -ms-transform: translateY(60%)
+         transform: translateY(60%)
+      
+      
+      
       &__title
          font-size: 4.2rem
 
+         
       &__desc
          width: 55%
 
@@ -48,8 +58,8 @@
             h3
                font-size: 2rem
 
+      
       &__row:nth-child(1)
-
          .book:nth-child(1)
             margin-right: 22.5em
 
@@ -58,7 +68,6 @@
 
 
       &__row:nth-child(2)
-
          .book:nth-child(2)
             margin: 0 3em
 
@@ -75,6 +84,7 @@
       &__text
          font-size: 2rem
 
+         
    /*======== Memories ========*/
 
 
@@ -86,6 +96,7 @@
       &__item
          font-size: 1.6rem
 
+         
    /*======== Gallery ========*/
 
 
@@ -106,103 +117,101 @@
 
 
    /*======== Header ========*/
+   
+   .menu
+      &__wrapper
+         width: 40%
+         position: fixed
+         top: 0
+         right: 0
+         z-index: 5
+         height: 100vh
+         background-color: rgba(255,255,255,1)
+         display: none
+         border-top-left-radius: 1.5rem
+         border-bottom-left-radius: 1.5rem
+   
+
+      &__list
+         flex-direction: column
+         width: 100%
+         justify-content: flex-start
+      
+      &__item
+         width: 100%
+         display: inline-flex
+         justify-content: center
+         align-items: center
+         margin-bottom: 1em
+         // border-bottom: 0.1rem solid lightgrey
+
+      &__close
+         display: flex
+         justify-content: flex-end
+         padding: 1em 3em
+         
+         span::before
+            font-size: 35px
+      
+      
+      &__link
+         display: inline-block
+         // width: 100%
+         text-align: center
+         padding: 1em 0
+         color: $black
+         font-size: 1.9rem
+         border-bottom: 0.19rem solid #fd0
+      // border-top: 0.19rem solid #fd0
+
+
+      &__item_custom
+         // display: blocks
+         height: auto
+         
+         margin: 0
+         text-align: center
+      
+      &__langList
+         // height: 100%
+         // min-height: 100%
+         max-height: 100%
+         flex-direction: row
+         overflow: visible
+      // border-bottom: 0.19rem solid #fd0
+      // border-top: 0.19rem solid #fd0
+
+      
+      
+      &__langLink
+         display: block
+         padding:  1em
+         color: $black
+         border-bottom: 0.19rem solid #fd0
+      
+      
+      
+      &__icon
+         display: inline-flex
+         justify-content: center
+         align-items: center
+         
+         span::before
+            font-size: 35px
+   
+   
    .header
       position: relative
       z-index: 3
 
-      .menu
-         &__wrapper
-            width: 40%
-            position: fixed
-            top: 0
-            right: 0
-            z-index: 5
-            // width: 100%
-            height: 100vh
-            background-color: rgba(255,255,255,1)
-            display: none
-            // border-radius: 1.5rem
-            border-top-left-radius: 1.5rem
-            border-bottom-left-radius: 1.5rem
-            // -webkit-box-shadow: -4px 0px 7px -2px rgba(153,153,153,1)
-            // -moz-box-shadow: -4px 0px 7px -2px rgba(153,153,153,1)
-            // box-shadow: -4px 0px 7px -2px rgba(153,153,153,1)
-
-         &__list
-            flex-direction: column
-            width: 100%
-            justify-content: flex-start
-
-         &__item
-            width: 100%
-            display: inline-flex
-            justify-content: center
-            align-items: center
-            margin-bottom: 1em
-            // border-bottom: 0.1rem solid lightgrey
-
-         &__close
-            display: flex
-            justify-content: flex-end
-            padding: 1em 3em
-
-            span::before
-               font-size: 35px
-
-
-         &__link  
-            display: inline-block
-            // width: 100%
-            text-align: center
-            padding: 1em 0
-            color: $black
-            font-size: 1.9rem
-            border-bottom: 0.19rem solid #fd0
-            // border-top: 0.19rem solid #fd0
-
-
-         &__item_custom
-            // display: blocks
-            height: auto
-
-            margin: 0   
-            text-align: center    
-
-         &__langList
-            // height: 100%
-            // min-height: 100%
-            max-height: 100%
-            flex-direction: row
-            overflow: visible
-            // border-bottom: 0.19rem solid #fd0
-            // border-top: 0.19rem solid #fd0
-
-    
-
-         &__langLink
-            display: block
-            padding:  1em
-            color: $black
-            border-bottom: 0.19rem solid #fd0
-
-            
-
-         &__icon
-            display: inline-flex
-            justify-content: center
-            align-items: center
-
-            span::before
-               font-size: 35px
+      
 
    /*======== Header ========*/
 
 
 
    /*======== Books ========*/
-   
    .books
-
       &__slide
 
          .single_book
@@ -237,25 +246,26 @@
       .md_none
          display: none
 
+         
    /*======== Books ========*/
 
 
 
    /*======== Gallery ========*/
    .gallery
-
       &__img
          height: 40rem
 
+         
    /*======== Gallery ========*/
 
 
 
    /*======== Contact ========*/
    .contact
-
       .copyright
          font-size: 1.7rem
+         
    /*======== Contact ========*/
 
 
@@ -268,13 +278,13 @@
 
 
    /*======== Header ========*/
+   
+   .menu
+      &__wrapper
+         width: 55%
+   
+         
    .header
-
-      .menu
-
-         &__wrapper
-            width: 55%
-
 
       &__content
          transform: translateY(50%)
@@ -293,7 +303,6 @@
 
    /*======== Books ========*/
    .books
-
       .book
          width: 13rem
          height: 13rem
@@ -317,14 +326,13 @@
       &__row:nth-child(3)
          padding: 0 2em
 
+         
    /*======== Books ========*/
 
 
 
    /*======== Gallery ========*/
-   .gallery 
-
-
+   .gallery
       &__list
          flex-wrap: wrap
          justify-content: center
@@ -336,13 +344,13 @@
       &__img
          height: 23rem 
 
+         
    /*======== Gallery ========*/
 
 
 
    /*======== Contact ========*/
    .contact
-
       &__text
          width: 60%
 
@@ -358,18 +366,16 @@
 
 
    /*======== Header ========*/
-   .header
-
-      .menu
-
-         .logo__link
-
-            .name
-               font-size: 2.8rem
-
-            .surname
-               font-size: 2rem
-
+   .menu
+      .logo__link
+         
+         .name
+            font-size: 2.8rem
+         
+         .surname
+            font-size: 2rem
+   
+            
    /*======== Header ========*/
 
    
@@ -384,14 +390,13 @@
 
    /*======== Gallery ========*/
    .gallery
-
-
       &__img
          height: 46rem
 
    /*======== Gallery ========*/
+   
+   /*======== Contact ========*/
    .contact
-
       &__email
          font-size: 3rem
 
@@ -406,7 +411,6 @@
 
    /*======== Header ========*/
    .header
-
       &__title
          font-size: 3.3rem
 
@@ -476,31 +480,31 @@
 
 
    /*======== Header ========*/
+   
+   .menu
+      &__wrapper
+         width: 80%
+         border-top-left-radius: 0
+         border-bottom-left-radius: 0
+      
+      
+      .logo__link
+         
+         .name
+            font-size: 2.5rem
+         
+         .surname
+            font-size: 1.85rem
+      
+      &__close
+         padding: 3em 3em 0
+      
+      &__icon,&__close
+         span::before
+            font-size: 3rem
+   
+            
    .header
-
-      .menu
-
-         &__wrapper
-            width: 80%
-            border-top-left-radius: 0
-            border-bottom-left-radius: 0
-
-
-         .logo__link
-
-            .name
-               font-size: 2.5rem
-
-            .surname
-               font-size: 1.85rem
-
-         &__close
-            padding: 3em 3em 0
-
-         &__icon,&__close
-            span::before
-               font-size: 3rem
-
 
       &__title
          font-size: 2.8rem
@@ -549,8 +553,6 @@
    
    /*======== Gallery ========*/
    .gallery
-
-
       &__img
          height: 37rem
 
@@ -576,7 +578,6 @@
 
 
 @media (max-width: 360px)
-
    /*======== Common classes ========*/
    .section__title
       font-size: 2rem
@@ -585,32 +586,32 @@
 
 
    /*======== Header ========*/
+   
+   .menu
+      
+      &__wrapper
+         width: 100%
+         border-top-left-radius: 0
+         border-bottom-left-radius: 0
+      
+      
+      .logo__link
+         
+         .name
+            font-size: 2rem
+         
+         .surname
+            font-size: 1.5rem
+      
+      &__close
+         padding: 3em 3em 0
+      
+      &__icon,&__close
+         span::before
+            font-size: 3rem
+   
+            
    .header
-
-      .menu
-
-         &__wrapper
-            width: 100%
-            border-top-left-radius: 0
-            border-bottom-left-radius: 0
-
-
-         .logo__link
-
-            .name
-               font-size: 2rem
-
-            .surname
-               font-size: 1.5rem
-
-         &__close
-            padding: 3em 3em 0
-
-         &__icon,&__close
-            span::before
-               font-size: 3rem
-
-
       &__title
          font-size: 2.1rem
 
@@ -675,8 +676,6 @@
 
    /*======== Gallery ========*/
    .gallery
-
-
       &__img
          height: 25rem
 
@@ -685,7 +684,6 @@
 
    /*======== Contact ========*/
    .contact
-
       &__text
          font-size: 1.6rem
          width: 95%

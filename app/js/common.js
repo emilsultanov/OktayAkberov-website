@@ -1,10 +1,24 @@
-// $(window).scroll(function() {
-//    if ($(document).scrollTop() > 50) {
-// 	this.console.log('true')
-// } else {
-// 	this.console.log('false')
-//    }
-//  });
+
+
+
+let _window=$(window);
+let _window_width=$(window).width();
+
+$(window).resize(function(){
+	_window_width=$(this).width();
+});
+$(window).trigger('resize');
+
+
+$('.menu__link').click(function(event){
+	event.preventDefault();
+	let _menu_link=$(this);
+	
+	if(_window_width<=360){
+		_menu_link.closest('.menu__wrapper').fadeOut(300);
+	}
+});
+
 
 
 $(document).ready(function () {
@@ -18,6 +32,20 @@ $(document).ready(function () {
 	// 	anchors: ['biography', 'books', 'memories', 'gallery', 'contact'],
 	// });
 	// $.fn.fullpage.setAllowScrolling(true);
+	
+	
+	$('.menu__link').click(function(event){
+		event.preventDefault();
+		
+		let _nav__position=$(this).closest('.nav__position').outerHeight();
+		
+		console.log(_nav__position);
+		console.log($(this.hash).offset().top);
+		
+		$('body,html').animate({
+			scrollTop: ($(this.hash).offset().top-_nav__position)
+		},100);
+	});
 	
 	
 	// Init Memories slider
